@@ -1,10 +1,11 @@
 programa
 {
-	inclua biblioteca Util --> u
+	inclua biblioteca Util --> u
 	
 	funcao inicio()
 	{
 		inteiro faccao,dificuldade, energia=0,turno,chance=0, movimentacao= 0
+		inteiro tipo_Evento=0 , probabilidade, evento
 
          faca{
          	  
@@ -108,17 +109,41 @@ senao{
           		// VAI INTERROMPER 
           	
           }
-          escreva("\n voce sobreviveu e estar mais perto da base humana ")// APARARECE CASO JOGADOR SOBREVIVA 
-     
-       
-   
+          escreva("\n voce sobreviveu e esta na base humana ")// APARARECE CASO JOGADOR SOBREVIVA 
 
-         	
-        
-		
-		
+          	faca{ //INICIO DA ORGANIZAÇÃO DOS POSSIVEIS EVENTOS
+		  probabilidade=Util.sorteia(1, 100)
+		  se(dificuldade == 1 ){
+		  	tipo_Evento = 10
+		  }senao se (dificuldade == 2){
+		  	tipo_Evento = 10 
+		  }senao se(dificuldade == 3 ){ 
+		  	tipo_Evento = 30
+		  }
+
+		  	
+		  }enquanto(probabilidade < tipo_Evento)
+		  	
+		escreva("\nAlgo esta acontecendo, oq é isso")
+
+		 evento = Util.sorteia(1,3)
+
+		se(evento == 1){
+			escreva("\n esta acontecendo um ataque de zumbis!")
+		}
+		senao se(evento == 2){
+			escreva("\nA base esta tendo uma explosão!")
+		}
+		senao se(evento == 3){
+			escreva("\nOs zumbis fizeram um emboscada ")
+		 
+		  		
+  
+		  
+		  	
 	}
-
+	
+       }        
 	
 }
 
@@ -129,7 +154,7 @@ senao{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 106; 
+ * @POSICAO-CURSOR = 4143; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
