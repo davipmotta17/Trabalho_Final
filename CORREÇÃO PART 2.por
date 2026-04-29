@@ -155,7 +155,7 @@ programa
         }
         senao{
         	escreva("\nStatus: Não conseguiu chegar à base")
-        }
+        }//ESTA FALTANDO SOMENTE REVISAR E TERMINAR O PONTO DO DESAFIO 
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -163,7 +163,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4768; 
+ * @POSICAO-CURSOR = 4830; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
