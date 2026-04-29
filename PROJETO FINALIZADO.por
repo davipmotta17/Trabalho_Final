@@ -1,16 +1,16 @@
 programa
 {
-	inclua biblioteca Util --> u
+	inclua biblioteca Util --> u // Biblioteca usada para gerar números aleatórios
 	
 	funcao inicio()
-	{
+	{    // DECLARAÇÃO DE VARIAVEIS 
 		inteiro faccao,dificuldade, energia=0,turno,chance=0, movimentacao= 0
 		inteiro tipo_Evento=0 , probabilidade, evento
 		inteiro explorar=0,descansar=0 , procurar=0, eventosPerigosos=0
 		
-		//DESAFIO
+		//DESAFIO - sistema de kit médico (cura extra)
 		inteiro kitMedico = 1 , kit
-		 
+		 //================== ESCOLHA DA FACÇÃO ===============
 		faca{
 			escreva("\n\n=============================================")
 			escreva("\n            INICIO DE JOGO                     ")
@@ -25,8 +25,8 @@ programa
 		
 			limpa()
 		}
-		enquanto( faccao < 1 ou faccao > 3 )
-
+		enquanto( faccao < 1 ou faccao > 3 )//VERIFICADOR 
+                // ESCOLHA DA DIFICULDADE 
 		faca {
 			escreva("\n Escolha a dificulade \n")
 			escreva("1- Sobrevivente - modo fácil \n ° O jogador começa com 90 pontos de energia.")
@@ -35,7 +35,7 @@ programa
 			escreva("\nOpção : ")
 			leia(dificuldade)
 		}
-		enquanto( dificuldade < 1 ou dificuldade > 3)
+		enquanto( dificuldade < 1 ou dificuldade > 3)// VERIFICADOR 
 
 		//ENERGIA inicial 
 		se (dificuldade == 1 ){
@@ -101,7 +101,7 @@ programa
 			}
 			enquanto (movimentacao < 1 e movimentacao > 3 )
 
-			// AÇÕES E RESULTADOS 
+			// AÇÕES E RESULTADOS DO JOGADOR 
 			se (movimentacao == 1 ){
 				escreva("\n A cidade foi explorada ")
 				energia= energia - 15 
@@ -182,7 +182,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4360; 
+ * @POSICAO-CURSOR = 3478; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
