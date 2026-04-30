@@ -13,11 +13,14 @@ programa
 		escreva("\nGerencie sua energia, tome decisões estratégicas e sobreviva aos perigos.\n")
 
 		// ================= VARIÁVEIS =================
-		inteiro faccao, dificuldade, energia = 0, turno
-		inteiro movimentacao = 0, chance = 0, tipo_Evento = 0, probabilidade, evento
-		inteiro explorar = 0, descansar = 0, procurar = 0, eventosPerigosos = 0
-		inteiro kitMedico = 0 , kit 
-		cadeia resumo
+		inteiro faccao, dificuldade        // escolhas do jogador
+          inteiro energia = 0                // vida ou energia do jogador
+          inteiro turno                       // contador de dias
+          inteiro movimentacao = 0           // ação escolhida no dia
+          inteiro chance = 0, tipo_Evento = 0, probabilidade, evento  // usados para eventos aleatórios
+          inteiro explorar = 0, descansar = 0, procurar = 0, eventosPerigosos = 0  // contadores para o resumo final
+          inteiro kitMedico = 0, kit          // controle do uso de kits médicos
+          cadeia resumo                       // texto resumindo a ação do dia// cADEIA SERVE PARA GUARDAR UM TEXTO 
 
 		// ================= ESCOLHA DA FACÇÃO =================
 		faca{
@@ -73,6 +76,7 @@ programa
 
 			escreva("\n\nOpção: ")
 			leia(dificuldade)
+			limpa()
 		}
 		enquanto(dificuldade < 1 ou dificuldade > 3)
 
@@ -110,7 +114,7 @@ programa
 			}
 			enquanto(movimentacao < 1 ou movimentacao > 3)
 
-			resumo = ""
+			resumo = ""//garante que comece vazia para o dia começar  e mostar oq aconteceu
 
 			// ================= AÇÕES =================
 			se(movimentacao == 1){
@@ -126,7 +130,7 @@ programa
 				}senao{
 					energia = energia - 5
 				}
-				descansar++
+				descansar++// ADICIONAR MAIS UM A OPÇÃO QUANDO ESCOLHIDA 
 				resumo = "Descansou para recuperar energia."
 			}
 			senao se(movimentacao == 3){
@@ -168,7 +172,7 @@ programa
 
 			// ================= DESAFIO: KIT MÉDICO =================
 			chance = u.sorteia(1,100)
-			se(chance <= 20){
+			se(chance <= 30){// mesma coisa que possuir uma chance de 30%
 				escreva("\nVocê encontrou um kit médico escondido!")
 				kitMedico = 1
 			}
@@ -178,7 +182,7 @@ programa
 				se(kit == 1){
 					escreva("\nKit usado! +20 energia")
 					energia = energia + 20
-					kitMedico--
+					kitMedico--// subtrai 
 				}
 			}
 
@@ -217,7 +221,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 6325; 
+ * @POSICAO-CURSOR = 6500; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
