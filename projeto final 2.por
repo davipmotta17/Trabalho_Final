@@ -15,7 +15,7 @@ programa
 		// ================= VARIÁVEIS =================
 		inteiro faccao, dificuldade        // escolhas do jogador
           inteiro energia = 0                // vida ou energia do jogador
-          inteiro turno                       // contador de dias
+          inteiro turno=0                     // contador de dias
           inteiro movimentacao = 0           // ação escolhida no dia
           inteiro chance = 0, tipo_Evento = 0, probabilidade, evento  // usados para eventos aleatórios
           inteiro explorar = 0, descansar = 0, procurar = 0, eventosPerigosos = 0  // contadores para o resumo final
@@ -160,7 +160,7 @@ programa
 			senao tipo_Evento = 30
 
 			se(probabilidade <= tipo_Evento){
-				escreva("\n\n⚠ EVENTO PERIGOSO! ⚠")
+				escreva("\n\n EVENTO PERIGOSO! ")
 				eventosPerigosos++
 				se(faccao == 1) energia = energia - 10
 				senao se(faccao == 3) energia = energia - 25
@@ -205,13 +205,13 @@ programa
 		escreva("\n\n================================")
 		escreva("\n RELATÓRIO FINAL DA MISSÃO")
 		escreva("\n================================")
-		escreva("\nDias sobrevividos: ", (turno - 1))
+		escreva("\nDias sobrevividos: ", (turno))
 		escreva("\nEnergia final: ", energia)
 		escreva("\nExplorou: ", explorar)
 		escreva("\nDescansou: ", descansar)
 		escreva("\nProcurou suprimentos: ", procurar)
 		escreva("\nEventos perigosos: ", eventosPerigosos)
-          escreva("\nNumeros de kits usados",numKit )
+          escreva("\nNumeros de kits usados: ",numKit )
 		se(energia > 0){
 			escreva("\nSTATUS: Chegou à base Aurora!")
 		}senao{
@@ -224,7 +224,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 8; 
+ * @POSICAO-CURSOR = 5798; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
