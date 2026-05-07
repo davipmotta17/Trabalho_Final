@@ -215,7 +215,7 @@ programa
 		se(energia > 0){
 			escreva("\nSTATUS: Chegou a base Aurora!")
 		}senao{
-			escreva("\nSTATUS: voce conseguiu sobreviver")
+			escreva("\nSTATUS: voce não conseguiu sobreviver")
 		}
 	}
 }
@@ -224,7 +224,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1392; 
+ * @POSICAO-CURSOR = 7625; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
