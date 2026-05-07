@@ -19,7 +19,7 @@ programa
           inteiro movimentacao = 0           // ação escolhida no dia
           inteiro chance = 0, tipo_Evento = 0, probabilidade, evento  // usados para eventos aleatorios
           inteiro explorar = 0, descansar = 0, procurar = 0, eventosPerigosos = 0  // contadores para o resumo final
-          inteiro kitMedico = 0, kit , numKit =0         // controle do uso de kits mﾃｩdicos
+          inteiro kitMedico = 0, kit , numKit =0         // controle do uso de kits medicos
           cadeia resumo// texto resumindo a ação do dia// cADEIA SERVE PARA GUARDAR UM TEXTO 
            
 
@@ -224,7 +224,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1268; 
+ * @POSICAO-CURSOR = 1392; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
