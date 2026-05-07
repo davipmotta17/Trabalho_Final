@@ -4,26 +4,26 @@ programa
 
 	funcao inicio()
 	{
-		// ================= INTRODUÇÃO =================
+		// ================= INTRODUÇÃO=================
 		escreva("\n===================================================")
 		escreva("\n           BEM-VINDO AO APOCALIPSE ZUMBI")
 		escreva("\n===================================================")
-		escreva("\nO mundo entrou em colapso após uma pandemia transformar a população em zumbis.")
-		escreva("\nVocê precisa atravessar uma cidade devastada até Aurora, a Última Base Humana.")
-		escreva("\nGerencie sua energia, tome decisões estratégicas e sobreviva aos perigos.\n")
+		escreva("\nO mundo entrou em colapso apos uma pandemia transformar a população em zumbis.")
+		escreva("\nVocê precisa atravessar uma cidade devastada ate Aurora, a ultima Base Humana.")
+		escreva("\nGerencie sua energia, tome decisões estrategicas e sobreviva aos perigos.\n")
 
-		// ================= VARIÁVEIS =================
+		// ================= VARIVEIS =================
 		inteiro faccao, dificuldade        // escolhas do jogador
           inteiro energia = 0                // vida ou energia do jogador
-          inteiro turno=0                     // contador de dias
+          inteiro turno = 0                     // contador de dias
           inteiro movimentacao = 0           // ação escolhida no dia
-          inteiro chance = 0, tipo_Evento = 0, probabilidade, evento  // usados para eventos aleatórios
+          inteiro chance = 0, tipo_Evento = 0, probabilidade, evento  // usados para eventos aleatorios
           inteiro explorar = 0, descansar = 0, procurar = 0, eventosPerigosos = 0  // contadores para o resumo final
-          inteiro kitMedico = 0, kit , numKit =0         // controle do uso de kits médicos
-          cadeia resumo// texto resumindo a ação do dia// cADEIA SERVE PARA GUARDAR UM TEXTO 
+          inteiro kitMedico = 0, kit , numKit =0         // controle do uso de kits mﾃｩdicos
+          cadeia resumo// texto resumindo a aﾃｧﾃ｣o do dia// cADEIA SERVE PARA GUARDAR UM TEXTO 
            
 
-		// ================= ESCOLHA DA FACÇÃO =================
+		// ================= ESCOLHA DA FACﾃ�ﾃグ =================
 		faca{
 			escreva("\n\n=============================================")
 			escreva("\n            ESCOLHA SUA FACÇÃO")
@@ -32,14 +32,14 @@ programa
 			escreva("\nCada facção tem vantagens e desvantagens. Escolha sabiamente!\n")
 
 			escreva("\n1 - MILITARES")
-			escreva("\n Sofrem menos dano em eventos (-10 ao invés de -20)")
-			escreva("\n Descansar recupera menos (-8 energia ao invés de -5)")
-			escreva("\n Especialistas em combate e sobrevivência militar")
+			escreva("\n Sofrem menos dano em eventos (-10 ao inves de -20)")
+			escreva("\n Descansar recupera menos (-8 energia ao inves de -5)")
+			escreva("\n Especialistas em combate e sobrevivencia militar")
 
-			escreva("\n\n2 - MÉDICOS")
-			escreva("\n Ganham mais energia ao procurar suprimentos (+15 ao invés de +10)")
+			escreva("\n\n2 - MEDICOS")
+			escreva("\n Ganham mais energia ao procurar suprimentos (+15 ao inves de +10)")
 			escreva("\n Começam com menos energia (-10)")
-			escreva("\n Especialistas em primeiros socorros e resistência")
+			escreva("\n Especialistas em primeiros socorros e resistencia")
 
 			escreva("\n\n3 - SAQUEADORES")
 			escreva("\n 40% de chance de +10 energia extra ao procurar suprimentos")
@@ -58,10 +58,10 @@ programa
 			escreva("\n          ESCOLHA A DIFICULDADE")
 			escreva("\n=============================================")
 
-			escreva("\nCada dificuldade muda o nível de sobrevivência:")
-			escreva("\nLembrando que é possivel encontrar kits , se der sorte !")
+			escreva("\nCada dificuldade muda o nivel de sobrevincia:")
+			escreva("\nLembrando que é possivel encontrar kits para aumentar a energia , se der sorte !")
 
-			escreva("\n\n1 - SOBREVIVENTE (FÁCIL)")
+			escreva("\n\n1 - SOBREVIVENTE (FACIL)")
 			escreva("\n Começa com 90 de energia")
 			escreva("\n Eventos perigosos menos frequentes")
 			escreva("\n Ideal para iniciantes")
@@ -71,10 +71,10 @@ programa
 			escreva("\n Desafio equilibrado")
 			escreva("\n Para jogadores experientes")
 
-			escreva("\n\n3 - APOCALIPSE (DIFÍCIL)")
+			escreva("\n\n3 - APOCALIPSE (DIFICIL)")
 			escreva("\n Começa com 40 de energia")
 			escreva("\n Eventos perigosos mais frequentes")
-			escreva("\n Sobrevivência extrema")
+			escreva("\n Sobrevivencia extrema")
 
 			escreva("\n\nOpção: ")
 			leia(dificuldade)
@@ -100,9 +100,9 @@ programa
 			escreva("\n==============================")
 			escreva("\nEnergia atual: ", energia)
 
-			escreva("\nVocê avança pela cidade devastada...")
-			escreva("\nO ambiente é hostil e imprevisível.\n") 
-			// ================= MENU DE AÇÕES =================
+			escreva("\nVoce avança pela cidade devastada...")
+			escreva("\nO ambiente é hostil e imprevisivel.\n") 
+			// ================= MENU DE Ações =================
 			faca{
 				escreva("\n1 - Explorar cidade (-15 energia)")
 				escreva("\n2 - Descansar (-5 energia, Militares -8)")
@@ -111,28 +111,28 @@ programa
 				leia(movimentacao)
 
 				se(movimentacao < 1 ou movimentacao > 3){
-					escreva("\nOPÇÃO INVÁLIDA!")
+					escreva("\nOPÇÃO INVALIDA!")
 				}
 			}
 			enquanto(movimentacao < 1 ou movimentacao > 3)
 
-			resumo = ""//garante que comece vazia para o dia começar  e mostar oq aconteceu
+			resumo = ""//garante que comece vazia para o dia comeﾃｧar  e mostar oq aconteceu
 
-			// ================= AÇÕES =================
+			// ================= Acoes =================
 			se(movimentacao == 1){
-				escreva("\nVocê decidiu explorar a cidade.")
+				escreva("\nVoce decidiu explorar a cidade.")
 				energia = energia - 15
 				explorar++
-				resumo = "Explorou a cidade em busca de sobrevivência."
+				resumo = "Explorou a cidade em busca de sobrevivencia."
 			}
 			senao se(movimentacao == 2){
-				escreva("\nVocê descansou em um abrigo abandonado.")
+				escreva("\nVoce descansou em um abrigo abandonado.")
 				se(faccao == 1){
 					energia = energia - 8
 				}senao{
 					energia = energia - 5
 				}
-				descansar++// ADICIONAR MAIS UM A OPÇÃO QUANDO ESCOLHIDA 
+				descansar++// ADICIONAR MAIS UM Ao descansr QUANDO ESCOLHIDo
 				resumo = "Descansou para recuperar energia."
 			}
 			senao se(movimentacao == 3){
@@ -145,7 +145,7 @@ programa
 				se(faccao == 3){
 					chance = u.sorteia(1,100)
 					se(chance <= 40){
-						escreva("\nVocê encontrou recursos extras!")
+						escreva("\nVoce encontrou recursos extras!")
 						energia = energia + 10
 					}
 				}
@@ -153,7 +153,7 @@ programa
 				resumo = "Procurou suprimentos e encontrou recursos."
 			}
 
-			// ================= EVENTO ALEATÓRIO =================
+			// ================= EVENTO ALEATﾃ迭IO =================
 			probabilidade = u.sorteia(1,100)
 			se(dificuldade == 1) tipo_Evento = 10// sao as porcentagens 
 			senao se(dificuldade == 2) tipo_Evento = 20
@@ -168,18 +168,18 @@ programa
 
 				evento = u.sorteia(1,3)
 				se(evento == 1) escreva("\nHorda de zumbis atacando!")
-				senao se(evento == 2) escreva("\nPrédio desabando!")
+				senao se(evento == 2) escreva("\nPredio desabando!")
 				senao escreva("\nEmboscada em um beco!")
 			}
 
-			// ================= DESAFIO: KIT MÉDICO =================
+			// ================= DESAFIO: KIT MEDICO =================
 			chance = u.sorteia(1,100)
 			se(chance <= 30){// mesma coisa que possuir uma chance de 30%
-				escreva("\nVocê encontrou um kit médico escondido!")
+				escreva("\nVoce encontrou um kit medico escondido!")
 				kitMedico = 1
 			}
 			se(kitMedico == 1 e energia<=50){
-				escreva("\nDeseja usar o kit médico? (1-Sim / 2-Não): ")
+				escreva("\nDeseja usar o kit medico? (1-Sim / 2-Nﾃ｣o): ")
 				leia(kit)
 				se(kit == 1){
 					escreva("\nKit usado! +20 energia")
@@ -192,7 +192,7 @@ programa
 			// ================= LIMITE DE ENERGIA =================
 			se(energia > 100) energia = 100
 			se(energia <= 0){
-				escreva("\nVocê morreu no dia ", turno)
+				escreva("\nVoce morreu no dia ", turno)
 				pare
 			}
 
@@ -201,11 +201,11 @@ programa
 			escreva("\nEnergia final do dia: ", energia)
 		}
 
-		// ================= RELATÓRIO FINAL =================
+		// ================= RELATORIO FINAL =================
 		escreva("\n\n================================")
-		escreva("\n RELATÓRIO FINAL DA MISSÃO")
+		escreva("\n RELATORIO FINAL DA MISSAO")
 		escreva("\n================================")
-		escreva("\nDias sobrevividos: ", (turno))
+		escreva("\nDias sobrevividos: ", (turno - 1))
 		escreva("\nEnergia final: ", energia)
 		escreva("\nExplorou: ", explorar)
 		escreva("\nDescansou: ", descansar)
@@ -213,9 +213,9 @@ programa
 		escreva("\nEventos perigosos: ", eventosPerigosos)
           escreva("\nNumeros de kits usados: ",numKit )
 		se(energia > 0){
-			escreva("\nSTATUS: Chegou à base Aurora!")
+			escreva("\nSTATUS: Chegou a base Aurora!")
 		}senao{
-			escreva("\nSTATUS: Não conseguiu sobreviver")
+			escreva("\nSTATUS: voce conseguiu sobreviver")
 		}
 	}
 }
@@ -224,7 +224,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5798; 
+ * @POSICAO-CURSOR = 7248; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
