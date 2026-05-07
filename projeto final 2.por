@@ -20,10 +20,10 @@ programa
           inteiro chance = 0, tipo_Evento = 0, probabilidade, evento  // usados para eventos aleatorios
           inteiro explorar = 0, descansar = 0, procurar = 0, eventosPerigosos = 0  // contadores para o resumo final
           inteiro kitMedico = 0, kit , numKit =0         // controle do uso de kits mﾃｩdicos
-          cadeia resumo// texto resumindo a aﾃｧﾃ｣o do dia// cADEIA SERVE PARA GUARDAR UM TEXTO 
+          cadeia resumo// texto resumindo a ação do dia// cADEIA SERVE PARA GUARDAR UM TEXTO 
            
 
-		// ================= ESCOLHA DA FACﾃ�ﾃグ =================
+		// ================= ESCOLHA DA FACÇÃO =================
 		faca{
 			escreva("\n\n=============================================")
 			escreva("\n            ESCOLHA SUA FACÇÃO")
@@ -224,7 +224,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5579; 
+ * @POSICAO-CURSOR = 1268; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
