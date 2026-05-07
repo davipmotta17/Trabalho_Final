@@ -153,7 +153,7 @@ programa
 				resumo = "Procurou suprimentos e encontrou recursos."
 			}
 
-			// ================= EVENTO ALEATﾃ迭IO =================
+			// ================= EVENTO ALEATORIO =================
 			probabilidade = u.sorteia(1,100)
 			se(dificuldade == 1) tipo_Evento = 10// sao as porcentagens 
 			senao se(dificuldade == 2) tipo_Evento = 20
@@ -179,7 +179,7 @@ programa
 				kitMedico = 1
 			}
 			se(kitMedico == 1 e energia<=50){
-				escreva("\nDeseja usar o kit medico? (1-Sim / 2-Nﾃ｣o): ")
+				escreva("\nDeseja usar o kit medico? (1-Sim / 2-Não): ")
 				leia(kit)
 				se(kit == 1){
 					escreva("\nKit usado! +20 energia")
@@ -224,7 +224,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 7248; 
+ * @POSICAO-CURSOR = 5579; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
